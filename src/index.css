@@ -1,13 +1,181 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+    padding: 0 2rem;
+    background: #fafafa;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+li {
+    border: 1px solid black;
+    border-radius: 6px;
+    width: 50%;
+    margin-left: 5%;
+    list-style-type: none;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+img {
+    width: 30px;
+    height: 30px;
+}
+
+.other {
+    margin-top: 30px;
+}
+
+.btn {
+    margin-top: 10px;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: bold;
+    margin-left: 1rem;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn.active {
+    background: #3e6ae1;
+    color: #fff;
+}
+.btn:disabled {
+    cursor: not-allowed;
+}
+
+.centered {
+    text-align: center;
+}
+
+.control {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.country {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    overflow: scroll;
+}
+
+.country::-webkit-scrollbar {
+    display: none;
+}
+
+.drop {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 3px;
+    border-radius: 6px;
+    padding: 12px 8px;
+}
+
+.checkcountry {
+    width: 16px;
+    height: 16px;
+}
+
+.drop .city {
+    padding: 4px;
+}
+
+.customSelect {
+    display: flex;
+    align-items: center;
+}
+
+.selCities {
+    display: flex;
+}
+
+.cityBlock {
+    width: 27px;
+    height: 27px;
+    margin-right: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.cityBlock.active {
+    background: #3e6ae1;
+    color: #fff;
+}
+.home {
+    margin-left: 2px;
+    margin-top: 2px;
+    width: 20px;
+    height: 20px;
+}
+.enteredCities {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    z-index: 1;
+    padding: 12px 8px;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.cityQ {
+    margin-top: 3px;
+    background: #eaeaea;
+    border-radius: 6px;
+    padding: 4px;
+}
+.Clue {
+    margin-left: 393px;
+    position: absolute;
+    z-index: 100;
+    background: #eaeaea;
+    border-radius: 6px;
+    padding: 4px;
+    opacity: 0;
+    transition: 2s;
+    animation: show 3s ease-out 1s, hide 3s ease 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
